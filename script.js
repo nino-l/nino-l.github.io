@@ -1,6 +1,6 @@
 const parts = {
   prefixes: ['Talk2', 'Concept', 'Counterfactual', 'Multimodal', 'Texture2', 'Thermal', 'Semantic', 'Gaussian', 'Agentic'],
-  main: ['VIS', 'SAR', 'Drone', 'Satellite', 'CubeSat', 'Pose', 'LoD3', 'CrimeScene'],
+  main: ['VIS', 'SAR', 'Drone', 'Satellite', 'CubeSat', 'Pose', 'LoD3', 'CrimeScene', 'NeRF'],
   suffixes: ['Lupe', 'Reconstruction', 'Masking', '6D', 'Splat']
 };
 
@@ -9,7 +9,7 @@ const emoji = {
   Pose: '🧍‍♀️📐', LoD3: '🏙️🧱', Lupe: '🔍', Reconstruction: '🏗️🧩',
   Masking: '🎭', '6D': '🧭', Splat: '✨🌐', Talk2: '💬', Concept: '💡🧠',
   Counterfactual: '🔀🌍', Multimodal: '🎛️👁️', Texture2: '🧱', Thermal: '🌡️🔥', Semantic: '🏷️🗺️',
-  CrimeScene: '🔪🩸', Agentic: '🤖🧭'
+  CrimeScene: '🔪🩸', Agentic: '🤖🧭', NeRF: '🌐📸'
 };
 const ideas = document.querySelector('#ideas');
 
@@ -44,5 +44,3 @@ document.addEventListener('keydown', event => {
     generate();
   }
 });
-
-generate();
