@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f4">
+  <title>Idea Fieldnotes — Photogrammetry × Remote Sensing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Idea Fieldnotes home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>FIELD<span class="brand-light">NOTES</span></span>
+      </a>
+      <div class="top-meta"><span class="status-dot"></span> IDEA GENERATOR <span class="meta-divider">/</span> TUM · PFR</div>
+      <a class="about-link" href="https://www.asg.ed.tum.de/pf/" target="_blank" rel="noreferrer">THE CHAIR <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="intro">
+        <div class="eyebrow"><span>01</span> RESEARCH, REMIXED</div>
+        <h1>Somewhere between<br>the <span>pixels</span> is an idea.</h1>
+        <p class="lede">A little inspiration for the Photogrammetry &amp; Remote Sensing chair at TUM. Mix a few concepts, see what takes shape.</p>
+      </section>
+
+      <section class="generator" aria-labelledby="generator-heading">
+        <div class="section-head">
+          <div><div class="eyebrow"><span>02</span> THE IDEA MACHINE</div><h2 id="generator-heading">Fresh from the field</h2></div>
+          <div class="batch-label"><span class="live-dot"></span> <span id="batch-count">03</span> NEW IDEAS</div>
+        </div>
+        <div class="idea-grid" id="ideas" aria-live="polite" aria-atomic="false"></div>
+        <div class="action-row">
+          <button class="generate-button" id="generate" type="button"><span class="sparkle" aria-hidden="true">✳</span> Generate ideas <span class="button-arrow" aria-hidden="true">↗</span></button>
+          <span class="shortcut-hint">OR PRESS <kbd>SPACE</kbd></span>
+          <span class="session-count"><span class="count-icon">↻</span> <span id="session-count">0</span> batches explored</span>
+        </div>
+      </section>
+
+      <footer><span>PHOTOGRAMMETRY &amp; REMOTE SENSING</span><span class="footer-center">TECHNICAL UNIVERSITY OF MUNICH</span><span>48°08′ N&nbsp; 11°34′ E</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
