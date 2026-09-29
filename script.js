@@ -1,6 +1,6 @@
 const parts = {
-  prefixes: ['Talk2', 'Concept', 'Counterfactual', 'Multimodal', 'Texture2', 'Thermal', 'Semantic', 'Gaussian'],
-  main: ['VIS', 'SAR', 'Drone', 'Satellite', 'CubeSat', 'Pose', 'LoD3'],
+  prefixes: ['Talk2', 'Concept', 'Counterfactual', 'Multimodal', 'Texture2', 'Thermal', 'Semantic', 'Gaussian', 'Agentic'],
+  main: ['VIS', 'SAR', 'Drone', 'Satellite', 'CubeSat', 'Pose', 'LoD3', 'CrimeScene'],
   suffixes: ['Lupe', 'Reconstruction', 'Masking', '6D', 'Splat']
 };
 
@@ -8,12 +8,10 @@ const emoji = {
   VIS: '📸', SAR: '📡', Drone: '🚁', Satellite: '🛰️🌍', CubeSat: '🛰️📦', Gaussian: '🔔✨',
   Pose: '🧍‍♀️📐', LoD3: '🏙️🧱', Lupe: '🔍', Reconstruction: '🏗️🧩',
   Masking: '🎭', '6D': '🧭', Splat: '✨🌐', Talk2: '💬', Concept: '💡🧠',
-  Counterfactual: '🔀🌍', Multimodal: '🎛️👁️', Texture2: '🧱', Thermal: '🌡️🔥', Semantic: '🏷️🗺️'
+  Counterfactual: '🔀🌍', Multimodal: '🎛️👁️', Texture2: '🧱', Thermal: '🌡️🔥', Semantic: '🏷️🗺️',
+  CrimeScene: '🔪🩸', Agentic: '🤖🧭'
 };
 const ideas = document.querySelector('#ideas');
-const count = document.querySelector('#session-count');
-const batchLabel = document.querySelector('#batch-count');
-let batches = 0;
 
 function pick(list) { return list[Math.floor(Math.random() * list.length)]; }
 
@@ -35,11 +33,8 @@ function generate() {
   while (generated.size < 3) generated.add(JSON.stringify(makeIdea()));
   ideas.innerHTML = [...generated].map((row, i) => {
     const idea = JSON.parse(row);
-    return `<article class="idea-card"><div class="card-top"><span class="idea-index">IDEA / 0${i + 1}</span><span class="idea-emoji" role="img" aria-label="${idea.marks}">${idea.marks}</span></div><h3 class="idea-title">${idea.title}</h3><div class="idea-kind">${idea.label}</div></article>`;
+    return `<li><span class="number">0${i + 1}</span><span class="title">${idea.title}</span><span class="emoji" role="img" aria-label="${idea.marks}">${idea.marks}</span></li>`;
   }).join('');
-  batches++;
-  count.textContent = batches;
-  batchLabel.textContent = '03';
 }
 
 document.querySelector('#generate').addEventListener('click', generate);
